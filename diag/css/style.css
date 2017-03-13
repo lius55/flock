@@ -1,0 +1,580 @@
+@charset "utf-8";
+
+/* clearfix 
+------------------------------------------------------------*/
+.cf:before,
+.cf:after{
+  content:" ";
+  display:table;
+}
+.cf:after{clear:both;}
+.cf{*zoom:1;}
+*{zoom:1;}
+
+/* contents 
+------------------------------------------------------------*/
+.wrapper {
+  width:100%;
+  font-family:"Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3","メイリオ",Meiryo,"MS P Gothic","ＭＳ Ｐゴシック",sans-serif;
+  font-size:16px;
+  line-height:1.5;
+}
+.mincho{
+  font-family:"ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+.gothic{
+  font-family:"Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3","メイリオ",Meiryo,"MS P Gothic","ＭＳ Ｐゴシック",sans-serif;
+}
+h1{position:absolute;top:-500px;white-space:nowrap;}
+
+#typecheck{
+  min-width:750px;
+  width:auto;
+  max-width:1400px;
+  height:800px;
+  background:url(../images/bg.jpg) center top no-repeat;
+  overflow:hidden;
+  margin:0 auto;
+}
+
+#typecheck .btn{
+  cursor:pointer;
+}
+#typecheck .btn:hover{
+  opacity:0.8;
+}
+#typecheck a img:hover{
+  opacity:0.8;
+}
+.section{
+  position:relative;
+}
+.invisible{
+  display:none;
+}
+a:focus,*:focus{outline:none;}
+
+/* 診断 
+------------------------------------------------------------*/
+#typecheck #start h2{
+  width:790px;
+  position:absolute;
+  top:189px;
+  left:0;
+  right:0;
+  margin:0 auto;
+}
+#typecheck #start h3{
+  width:383px;
+  position:absolute;
+  top:130px;
+  left:0;
+  right:0;
+  margin:0 auto;
+}
+#typecheck #start .lead{
+  width:540px;
+  position:absolute;
+  top:343px;
+  left:0;
+  right:0;
+  margin:0 auto;
+}
+#typecheck #start .btn-start{
+  width:283px;
+  position:absolute;
+  top:579px;
+  left:0;
+  right:0;
+  margin:0 auto;
+}
+#typecheck #start .hane{
+  position:absolute;
+  top:222px;
+  left:67.4%;
+}
+@media screen and (max-width:1200px){
+#typecheck #start .hane{left:77.4%;}
+}
+
+.question{}
+.question h3{
+  color:#e8958b;
+  font-size:34px;
+  text-align:center;
+  margin-top:136px;
+  margin-bottom:16px;
+}
+.question h4{
+  margin:0 auto 92px;
+  padding-top:25px;
+  width:790px;
+  height:70px;
+  text-align:center;
+  border-top:2px solid #e8958b;
+  border-bottom:2px solid #e8958b;
+}
+.question h4 p{
+  color:#555555;
+  font-size:44px;
+  line-height:1.0;
+}
+.question h4 p.f-small1{
+  padding-top:4px;
+  font-size:40px;
+}
+.question h4 p.f-small2{
+  padding-top:4px;
+  font-size:38px;
+}
+.question ul{
+  width:790px;
+  margin:0 auto;
+}
+.question ul li{
+  float:left;
+  width:246px;
+  margin-right:26px;
+}
+.question ul li.last{
+  margin-right:0;
+}
+.question .btn-return{
+  width:217px;
+  margin:103px auto 0;
+}
+
+/* 頭皮タイプ 
+------------------------------------------------------------*/
+#typecheck #type{}
+#typecheck #type h3{
+  color:#e8958b;
+  font-size:34px;
+  text-align:center;
+  margin-top:136px;
+  margin-bottom:16px;
+}
+#typecheck #type h4{
+  color:#555555;
+  font-size:44px;
+  line-height:1.0;
+  width:790px;
+  text-align:center;
+  border-top:2px solid #e8958b;
+  border-bottom:2px solid #e8958b;
+  margin:0 auto 45px;
+  padding:25px 0;
+}
+#typecheck #type .result{
+  width:790px;
+  margin:0 auto;
+}
+#typecheck #type .result .result-left{
+  float:left;
+  width:480px;
+}
+#typecheck #type .result p{
+  color:#555555;
+  font-size:24px;
+  line-height:1.8;
+  text-align:left;
+}
+#typecheck #type .result .btn-care{
+  margin-top:32px;
+}
+#typecheck #type .result .pic{
+  float:right;
+  margin-light:10px;
+}
+
+#typecheck #type .btm-btn{
+  width:628px;
+  position:absolute;
+  top:590px;
+  #top:725px;
+  left:0;
+  right:0;
+  margin:0 auto;
+}
+#typecheck #type .btn-rtn{
+  float:left;
+  width:299px;
+}
+#typecheck #type .btn-dl{
+  float:right;
+  width:299px;
+}
+
+/* おすすめ 
+------------------------------------------------------------*/
+#typecheck #care{}
+#typecheck #care h3{
+  color:#e8958b;
+  font-size:34px;
+  text-align:center;
+  margin-top:136px;
+  margin-bottom:16px;
+}
+#typecheck #care h4{
+  color:#555555;
+  font-size:44px;
+  line-height:1.0;
+  width:790px;
+  text-align:center;
+  border-top:2px solid #e8958b;
+  border-bottom:2px solid #e8958b;
+  margin:0 auto;
+  padding:20px 0 15px;
+}
+#typecheck #care h4 p{
+  font-size:16px;
+  margin-top:14px;
+}
+#typecheck #care .btns{
+  width:770px;
+  margin:15px auto 0;
+}
+#typecheck #care .btn-type{
+  width:363px;
+  float:left;
+}
+#typecheck #care .btn-buy{
+  width:224px;
+  float:right;
+}
+#typecheck #care .btn-rtn{
+  width:299px;
+  position:absolute;
+  top:590px;
+  #top:725px;
+  left:0;
+  right:0;
+  margin:0 auto;
+}
+
+
+#typecheck #care .icons{
+  width:777px;
+  height:100px;
+  margin:8px auto 0;
+}
+#typecheck #care .pic{
+  width:777px;
+  margin:0 auto;
+}
+#typecheck #care .pic ul li{}
+#typecheck #care .pic ul li.item1-1a{
+  float:left;
+  width:100px;
+  margin-right:0px;
+}
+#typecheck #care .pic ul li.item1-1b{
+  float:left;
+  width:100px;
+  margin-right:87px;
+}
+#typecheck #care .pic ul li.item1{
+  float:left;
+  width:200px;
+  margin-right:87px;
+}
+#typecheck #care .pic ul li.item2{
+  float:left;
+  width:200px;
+  margin-right:90px;
+}
+#typecheck #care .pic ul li.item3{
+  float:left;
+  width:200px;
+  margin-right:0px;
+}
+
+
+
+
+/* smart phon
+------------------------------------------------------------*/
+#typecheck .pc{display:block;}
+#typecheck .sp{display:none;}
+@media screen and (max-width:750px){
+#typecheck .pc{display:none;}
+#typecheck .sp{display:block;}
+
+#typecheck{
+  width:100%;
+  height:auto;
+  background:url(../images/sp/bg.png) #d1d1d1 center top no-repeat;
+  overflow:hidden;
+}
+#typecheck .bg-top{
+  height:57px;
+  background:url(../images/sp/bg-top.png) center top no-repeat;
+}
+#typecheck .section{
+  min-height:1240px;
+  background:url(../images/sp/bg-mid.png) center top repeat-y;
+}
+#typecheck .bg-btm{
+  height:37px;
+  background:url(../images/sp/bg-btm.png) center top no-repeat;
+}
+#typecheck hr{
+  width:620px;
+  margin:50px auto;
+  border:0;
+  border-bottom:2px solid #adadad;
+}
+
+/* 診断 sp
+------------------------------------------------------------*/
+#typecheck #start .sp h2{
+  width:620px;
+  position:absolute;
+  top:201px;
+  left:0;
+  right:0;
+  margin:0 auto;
+}
+#typecheck #start .sp h3{
+  width:620px;
+  position:absolute;
+  top:100px;
+  left:0;
+  right:0;
+  margin:0 auto;
+}
+#typecheck #start .sp .lead{
+  width:620px;
+  position:absolute;
+  top:464px;
+  left:0;
+  right:0;
+  margin:0 auto;
+}
+#typecheck #start .sp .btn-start{
+  width:620px;
+  position:absolute;
+  top:853px;
+  left:0;
+  right:0;
+  margin:0 auto;
+}
+#typecheck #start .sp .hane{
+  position:absolute;
+  top:524px;
+  left:615px;
+}
+
+.question{}
+.question h3{
+  color:#e8958b;
+  font-size:42px;
+  text-align:center;
+  margin-top:0;
+  margin-bottom:48px;
+  padding-top:42px;
+}
+.question h4{
+  padding:25px 0;
+  width:620px;
+  font-size:68px;
+  height:auto;
+  border-top:4px solid #e8958b;
+  border-bottom:4px solid #e8958b;
+  margin:0 auto 92px;
+}
+.question h4 p,
+.question h4 p.f-small1,
+.question h4 p.f-small2{
+  line-height:1.2;
+  padding-top:0;
+  font-size:68px;
+}
+.question ul{
+  width:620px;
+  margin:0 auto;
+}
+.question ul li{
+  float:none;
+  width:620px;
+  margin-right:0;
+  margin-bottom:40px;
+}
+.question ul li:last-child{
+  margin-right:0;
+  margin-bottom:0;
+}
+.question .btn-return{
+  width:620px;
+  margin:100px auto 0;
+}
+
+/* 頭皮タイプ sp
+------------------------------------------------------------*/
+#typecheck #type{}
+#typecheck #type h3{
+  color:#e8958b;
+  font-size:42px;
+  text-align:center;
+  margin-top:0;
+  margin-bottom:48px;
+  padding-top:42px;
+}
+#typecheck #type h4{
+  color:#555555;
+  font-size:68px;
+  line-height:1.2;
+  width:620px;
+  text-align:center;
+  border-top:4px solid #e8958b;
+  border-bottom:4px solid #e8958b;
+  margin:0 auto 40px;
+  padding:25px 0;
+}
+#typecheck #type .result{
+  width:620px;
+  margin:0 auto;
+}
+#typecheck #type .result .result-left{
+  float:none;
+  width:620px;
+}
+#typecheck #type .result p{
+  color:#555555;
+  font-size:32px;
+  line-height:1.8;
+  text-align:left;
+}
+#typecheck #type .result .btn-care{
+  margin-top:100px;
+}
+#typecheck #type .result .pic{
+  float:none;
+  margin-light:0;
+  margin-top:40px;
+}
+#typecheck #type .btm-btn{
+  width:620px;
+  position:static;
+}
+#typecheck #type .btn-rtn,
+#typecheck #type .btn-dl{
+  position:static;
+  width:620px;
+  margin:40px auto;
+}
+#typecheck #type .btn-dl{
+  padding-bottom:40px;
+}
+
+/* おすすめ sp
+------------------------------------------------------------*/
+#typecheck #care{}
+#typecheck #care h3{
+  color:#e8958b;
+  font-size:40px;
+  line-height:1.2;
+  text-align:center;
+  margin-top:0;
+  margin-bottom:30px;
+  padding-top:20px;
+}
+#typecheck #care h4{
+  color:#555555;
+  font-size:68px;
+  line-height:1.2;
+  width:620px;
+  text-align:center;
+  border-top:4px solid #e8958b;
+  border-bottom:4px solid #e8958b;
+  margin:0 auto 49px;
+  padding:25px 0;
+}
+#typecheck #care h4 p{
+  font-size:24px;
+  line-height:1.5;
+  margin-top:0px;
+  text-align:left;
+}
+#typecheck #care .btn-type{
+  float:none;
+  width:620px;
+  margin:90px auto 50px;
+}
+#typecheck #care .btn-buy{
+  float:none;
+  width:620px;
+  margin:50px auto 0;
+}
+#typecheck #care .btn-rtn{
+  position:static;
+  width:620px;
+  margin:40px auto 0;
+  padding-bottom:30px;
+}
+
+#typecheck #care .pic{
+  width:620px;
+  margin:0 auto;
+}
+#typecheck #care .pic ul{}
+#typecheck #care .pic ul li{}
+#typecheck #care .pic ul li .sp-icon{
+  width:152px;
+  margin:0 auto 40px;
+}
+
+#typecheck #care .pic ul li.item1-1a{}
+#typecheck #care .pic ul li.item1-1b{}
+#typecheck #care .pic ul li.item-box1{
+  width:620px;
+  height:680px;
+  margin:0 auto 90px;
+}
+#typecheck #care .pic ul li.item-box1 .item1-1a{
+  float:left;
+  width:310px;
+  margin-right:69px;
+}
+#typecheck #care .pic ul li.item-box1 .item1-1b{
+  float:left;
+  width:241px;
+}
+#typecheck #care .pic ul li.item1{
+  float:none;
+  width:318px;
+  height:680px;
+  margin:0 auto 90px;
+  clear:both;
+}
+#typecheck #care .pic ul li.item2{
+  float:none;
+  width:318px;
+  height:680px;
+  margin:0 auto 90px;
+  clear:both;
+}
+#typecheck #care .pic ul li.item3{
+  float:none;
+  width:318px;
+  height:650px;
+  margin:0 auto;
+}
+
+
+/* 画像ダウンロード
+------------------------------------------------------------*/
+#download-contents{
+  width:750px;
+  height:auto;
+  margin:0 auto;
+  overflow:hidden;
+}
+#download-contents .message{
+  width:750px;
+  height:190px;
+  background:url(../images/sp/sp_msg.png) #fff 0 0 no-repeat;
+}
+
+
+}/* @media screen end */
