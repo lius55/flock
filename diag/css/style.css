@@ -31,8 +31,8 @@ h1{position:absolute;top:-500px;white-space:nowrap;}
   min-width:750px;
   width:auto;
   max-width:1400px;
-  height:800px;
-  background:url(../images/bg.jpg) center top no-repeat;
+  height:935px;
+  background:url(../images/bg.png) center top no-repeat;
   overflow:hidden;
   margin:0 auto;
 }
