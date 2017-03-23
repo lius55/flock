@@ -21,57 +21,106 @@ window.onload = function() {
 
 	// 結果判定ルール
 	var rules = {
-		"AAA-A-A-AA": 
-			{ result: 'result_02.png', status: '', advice: '', goods: '' },
-		"AAA-A-A-BA": 
-			{  }
+		"AAA-A-A-AA": { 
+			num: '01', result: 'result_02.png', status: 'status_01.png', advice: 'adv_01.png', 
+			goods: '' },
+		"AAA-A-A-BA": { 
+			num: '02', result: 'result_02.png', status: 'status_01.png', advice: 'adv_01.png', 
+			goods: '' },
 		"AAA-A-B--A":
+			{ num: '03', result: 'result_03.png', status: 'status_02.png', advice: 'adv_02.png', goods: '' },
 		"AAB-A-A-AA":
+			{ num: '04', result: 'result_04.png', status: 'status_03.png', advice: 'adv_03.png', goods: '' },
 		"AAB-A-A-BA":
+			{ num: '05', result: 'result_04.png', status: 'status_03.png', advice: 'adv_03.png', goods: '' },
 		"AAB-A-B--A":
+			{ num: '06', result: 'result_05.png', status: 'status_04.png', advice: 'adv_04.png', goods: '' },
 		"AAB-B-A-AA":
+			{ num: '07', result: 'result_04.png', status: 'status_03.png', advice: 'adv_03.png', goods: '' },
 		"AAB-B-A-BA":
+			{ num: '08', result: 'result_04.png', status: 'status_03.png', advice: 'adv_03.png', goods: '' },
 		"AAB-B-B--A":
+			{ num: '09', result: 'result_05.png', status: 'status_02.png', advice: 'adv_04.png', goods: '' },
 		"ABA---A-AA":
+			{ num: '10', result: 'result_02.png', status: 'status_01.png', advice: 'adv_01.png', goods: '' },
 		"ABA---A-BA":
+			{ num: '11', result: 'result_02.png', status: 'status_01.png', advice: 'adv_01.png', goods: '' },
 		"ABA---B--A":
+			{ result: 'result_03.png', status: 'status_04.png', advice: 'adv_02.png', goods: '' },
 		"ABB---A-AA":
+			{ result: 'result_02.png', status: 'status_01.png', advice: 'adv_01.png', goods: '' },
 		"ABB---A-BA":
+			{ result: 'result_02.png', status: 'status_01.png', advice: 'adv_01.png', goods: '' },
 		"ABB---B--A":
+			{ result: 'result_03.png', status: 'status_04.png', advice: 'adv_02.png', goods: '' },
 		"BAA---A--A":
+			{ result: 'result_01.png', status: 'status_05.png', advice: 'adv_05.png', goods: '' },
 		"BAA---B--A":
+			{ result: 'result_06.png', status: 'status_05.png', advice: 'adv_05.png', goods: '' },
 		"BAB---A--A":
+			{ result: 'result_01.png', status: 'status_05.png', advice: 'adv_05.png', goods: '' },
 		"BAB---B--A":
+			{ result: 'result_06.png', status: 'status_05.png', advice: 'adv_05.png', goods: '' },
 		"BBA---A--A":
+			{ result: 'result_01.png', status: 'status_05.png', advice: 'adv_05.png', goods: '' },
 		"BBA---B--A":
+			{ result: 'result_06.png', status: 'status_05.png', advice: 'adv_05.png', goods: '' },
 		"BBB---A--A":
+			{ result: 'result_01.png', status: 'status_05.png', advice: 'adv_05.png', goods: '' },
 		"BBB---B--A":
+			{ result: 'result_06.png', status: 'status_05.png', advice: 'adv_05.png', goods: '' },
 		"AAA-A-A-AB":
+			{ result: 'result_07.png', status: 'status_04.png', advice: 'adv_06.png', goods: '' },
 		"AAA-A-A-BB":
+			{ result: 'result_07.png', status: 'status_04.png', advice: 'adv_06.png', goods: '' },
 		"AAA-A-B--B":
+			{ result: 'result_08.png', status: 'status_06.png', advice: 'adv_07.png', goods: '' },
 		"AAB-A-A-AB":
+			{ result: 'result_07.png', status: 'status_04.png', advice: 'adv_08.png', goods: '' },
 		"AAB-A-A-BB":
+			{ result: 'result_07.png', status: 'status_04.png', advice: 'adv_08.png', goods: '' },
 		"AAB-A-B--B":
+			{ result: 'result_09.png', status: 'status_06.png', advice: 'adv_09.png', goods: '' },
 		"AAB-A-A-AB":
+			{ result: 'result_07.png', status: 'status_04.png', advice: 'adv_08.png', goods: '' },
 		"AAB-A-A-BB":
+			{ result: 'result_07.png', status: 'status_04.png', advice: 'adv_08.png', goods: '' },
 		"AAB-A-B--B":
+			{ result: 'result_09.png', status: 'status_06.png', advice: 'adv_09.png', goods: '' },
 		"AAB-B-A-AB":
+			{ result: 'result_07.png', status: 'status_04.png', advice: 'adv_06.png', goods: '' },
 		"AAB-B-A-BB":
+			{ result: 'result_07.png', status: 'status_04.png', advice: 'adv_06.png', goods: '' },
 		"AAB-B-B--B":
+			{ result: 'result_08.png', status: 'status_06.png', advice: 'adv_07.png', goods: '' },
 		"ABA---A-AB":
+			{ result: 'result_07.png', status: 'status_04.png', advice: 'adv_06.png', goods: '' },
 		"ABA---A-BB":
+			{ result: 'result_07.png', status: 'status_04.png', advice: 'adv_06.png', goods: '' },
 		"ABA---B--B":
+			{ result: 'result_08.png', status: 'status_06.png', advice: 'adv_07.png', goods: '' },
 		"ABB---A-AB":
+			{ result: 'result_10.png', status: 'status_07.png', advice: 'adv_10.png', goods: '' },
 		"ABB---A-BB":
+			{ result: 'result_11.png', status: 'status_08.png', advice: 'adv_11.png', goods: '' },
 		"ABB---B--B":
+			{ result: 'result_10.png', status: 'status_07.png', advice: 'adv_10.png', goods: '' },
 		"BAA---A--B":
+			{ result: 'result_11.png', status: 'status_08.png', advice: 'adv_11.png', goods: '' },
 		"BAA---B--B":
+			{ result: 'result_10.png', status: 'status_07.png', advice: 'adv_10.png', goods: '' },
 		"BAB---A--B":
+			{ result: 'result_10.png', status: 'status_07.png', advice: 'adv_10.png', goods: '' },
 		"BAB---B--B":
+			{ result: 'result_11.png', status: 'status_08.png', advice: 'adv_11.png', goods: '' },
 		"BBA---A--B":
+			{ result: 'result_10.png', status: 'status_07.png', advice: 'adv_10.png', goods: '' },
 		"BBA---B--B":
+			{ result: 'result_11.png', status: 'status_08.png', advice: 'adv_11.png', goods: '' },
 		"BBB---A--B":
+			{ result: 'result_10.png', status: 'status_07.png', advice: 'adv_10.png', goods: '' },
 		"BBB---B--B":
+			{ result: 'result_11.png', status: 'status_08.png', advice: 'adv_11.png', goods: '' }
 	};
 
 
