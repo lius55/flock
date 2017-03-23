@@ -10,6 +10,7 @@
 <link rel="stylesheet" type="text/css" href="css/reset.css">
 <link rel="stylesheet" type="text/css" href="css/all.css">
 <script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.loadTemplate.min.js"></script>
 <script type="text/javascript" src="js/rule.js"></script>
 
 </head>
@@ -26,16 +27,52 @@
 		</div>
 	</div>
 
-	<div id="question1" class="section question">
+	<div id="question-section"></div>
+
+	<div id="result" class="section result">
 		<div class="pc">
-			質問1
-			<div class="btn-restart btn" value="restart"><img src="images/btn_restart.png" alt="最初からやり直す" /></div>
+			<div class="check-result"><img src="images/result_01.png" /></div>
+			<div class="status"><img src="images/status_01.png" /></div>
+			<div class="advice"><img src="images/adv_01.png" /></div>
+			<div class="goods"><img src="images/goods_01.png" /></div>
+		</div>
+		<div class="sp">
+		</div>
+	</div>
+</div>
+
+<script type="text/html" id="question-template">
+	<div data-id="questionId" class="section question">
+		<div class="pc">
+			<div class="question-num" data-content="questionNum"></div>
+			<div class="question-title"><img data-src="titleImage" /></div>
+			<div class="question-answer">
+				<img data-src="fstAnswer" class="btn" value="A" />
+				<img data-src="sndAnswer" class="btn" value="B" />
+			</div>
+			<div class="btn-restart btn" value="restart">
+				<img src="images/btn_restart.png" alt="最初からやり直す" />
+			</div>
 		</div>
 		<div class="sp">
 			
 		</div>
 	</div>
-</div>
+</script>
+
+<script type="text/html" id="result-template">
+	<div data-id="resultId" class="section result">
+		<div class="pc">
+			<div class="check-result"><img data-src="result" /></div>
+			<div class="status"><img data-src="status" /></div>
+			<div class="advice"><img data-src="advice" /></div>
+			<div class="goods" data-content="goods"></div>
+		</div>
+		<div class="sp">
+		</div>
+	</div>
+</script>
+
 
 </body>
 </html>
