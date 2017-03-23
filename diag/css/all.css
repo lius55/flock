@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+/* レスポンジブ対応 */
+.pc { display:block; }
+.sp { display:none; }
+@media screen and (max-width:750px) {
+	.pc{display:none;}
+	.sp{display:block;}
+}
+
+#typecheck {
+  	min-width:750px;
+  	width:auto;
+  	max-width:1400px;
+  	height:935px;
+	background:url(../images/bg.jpg) center top no-repeat;
+	overflow:hidden;
+	margin:0 auto;
+	left: 20%
+}
+
+/* 診断開始以外の内容非表示 */
+.question {
+	display: none;
+}
+.btn {
+	position: relative;
+}
+
+.section .pc {
+	margin:0 auto;
+	width: 805px;
+	height: 605px;
+	position: relative;
+	top: 100px;
+}
+
+#start .pc {
+	background:url(../images/bg_frame1.png) center top no-repeat;
+}
+#start .pc .btn-start {
+    float: right;
+    top: 400px;
+    right: 50px;
+}
+
+.question .pc {
+	background:url(../images/bg_frame2.png) center top no-repeat;
+}
+.question .pc .btn-restart {
+	top: 520px;
+	left: 30px;
+}
+

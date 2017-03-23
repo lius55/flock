@@ -1,0 +1,319 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Language" content="ja" />
+<title>TODO1</title>
+<meta name="viewport" content="width=750,minimum-scale=0.1" />
+
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/rule.js"></script>
+
+</head>
+
+<body>
+<div class="wrapper">
+
+<div id="typecheck">
+  <div class="bg-top sp"></div>
+  <div id="start" class="section">
+    <div class="pc">
+      <h3><img src="images/top_txt1.png" alt="あなたの頭皮の状態は？" /></h3>
+      <h2><img src="images/top_txt2.png" alt="アンファー頭皮タイプ診断" /></h2>
+      <div class="lead"><img src="images/top_txt3.png" /></div>
+      <div class="btn-start"><div class="btn" value="start"><img src="images/btn_start.png" alt="診断はコチラから" /></div></div>
+      <div class="hane"><img src="images/hane.png" alt="" /></div>
+    </div>
+    <div class="sp">
+      <h3><img src="images/sp/top_txt1.png" alt="あなたの頭皮の状態は？" /></h3>
+      <h2><img src="images/sp/top_txt2.png" alt="アンファー頭皮タイプ診断" /></h2>
+      <div class="lead"><img src="images/sp/top_txt3.png" alt="12の質問に、お応え下さい。あなたの頭皮タイプとピッタリのヘアケア処方が分かります。" /></div>
+      <div class="btn-start"><div class="btn" value="start"><img src="images/sp/btn_start.png" alt="診断はコチラから" /></div></div>
+      <div class="hane"><img src="images/sp/hane.png" alt="" /></div>
+    </div>
+  </div>
+  
+  <div id="question1" class="question section invisible">
+    <h3>Q1/12</h3>
+    <h4 class="mincho"><p>頭皮が乾燥している</p></h4>
+    <ul class="cf">
+      <li><div class="btn" value="A">
+        <img class="pc" src="images/btn_yes.png" alt="当てはまる" />
+        <img class="sp" src="images/sp/btn_yes.png" alt="当てはまる" />
+      </div></li>
+      <li><div class="btn" value="B">
+        <img class="pc" src="images/btn_no.png" alt="当てはまらない" />
+        <img class="sp" src="images/sp/btn_no.png" alt="当てはまらない" />
+      </div></li>
+    </ul>
+    <div class="btn btn-return" value="back">
+      <img class="pc" src="images/btn_rtn.png" alt="診断を最初からやり直す" />
+      <img class="sp" src="images/sp/btn_rtn.png" alt="診断を最初からやり直す" />
+    </div>
+  </div>
+  
+  <div id="question2" class="question section invisible">
+    <h3>Q2/12</h3>
+    <h4 class="mincho"><p>頭皮を掻いてしまう</p></h4>
+    <ul class="cf">
+      <li><div class="btn" value="2,3">
+        <img class="pc" src="images/btn_yes.png" alt="当てはまる" />
+        <img class="sp" src="images/sp/btn_yes.png" alt="当てはまる" />
+      </div></li>
+      <li><div class="btn" value="1,1">
+        <img class="pc" src="images/btn_no.png" alt="当てはまらない" />
+        <img class="sp" src="images/sp/btn_no.png" alt="当てはまらない" />
+      </div></li>
+      <li class="last"><div class="btn" value="3,2">
+        <img class="pc" src="images/btn_any.png" alt="どちらともいえない" />
+        <img class="sp" src="images/sp/btn_any.png" alt="どちらともいえない" />
+      </div></li>
+    </ul>
+    <div class="btn btn-return" value="back">
+      <img class="pc" src="images/btn_rtn.png" alt="診断を最初からやり直す" />
+      <img class="sp" src="images/sp/btn_rtn.png" alt="診断を最初からやり直す" />
+    </div>
+  </div>
+  
+  <div id="question3" class="question section invisible">
+    <h3>Q3/12</h3>
+    <h4 class="mincho"><p>髪を頻繁に<br class="sp">染めている</p></h4>
+    <ul class="cf">
+      <li><div class="btn" value="2,2">
+        <img class="pc" src="images/btn_yes.png" alt="当てはまる" />
+        <img class="sp" src="images/sp/btn_yes.png" alt="当てはまる" />
+      </div></li>
+      <li><div class="btn" value="1,1">
+        <img class="pc" src="images/btn_no.png" alt="当てはまらない" />
+        <img class="sp" src="images/sp/btn_no.png" alt="当てはまらない" />
+      </div></li>
+      <li class="last"><div class="btn" value="3,2">
+        <img class="pc" src="images/btn_any.png" alt="どちらともいえない" />
+        <img class="sp" src="images/sp/btn_any.png" alt="どちらともいえない" />
+      </div></li>
+    </ul>
+    <div class="btn btn-return" value="back">
+      <img class="pc" src="images/btn_rtn.png" alt="診断を最初からやり直す" />
+      <img class="sp" src="images/sp/btn_rtn.png" alt="診断を最初からやり直す" />
+    </div>
+  </div>
+  
+  <div id="question4" class="question section invisible">
+    <h3>Q4/12</h3>
+    <h4 class="mincho"><p>髪がうねり、<br class="sp">艶がない</p></h4>
+    <ul class="cf">
+      <li><div class="btn" value="2,2">
+        <img class="pc" src="images/btn_yes.png" alt="当てはまる" />
+        <img class="sp" src="images/sp/btn_yes.png" alt="当てはまる" />
+      </div></li>
+      <li><div class="btn" value="1,2">
+        <img class="pc" src="images/btn_no.png" alt="当てはまらない" />
+        <img class="sp" src="images/sp/btn_no.png" alt="当てはまらない" />
+      </div></li>
+      <li class="last"><div class="btn" value="3,2">
+        <img class="pc" src="images/btn_any.png" alt="どちらともいえない" />
+        <img class="sp" src="images/sp/btn_any.png" alt="どちらともいえない" />
+      </div></li>
+    </ul>
+    <div class="btn btn-return" value="back">
+      <img class="pc" src="images/btn_rtn.png" alt="診断を最初からやり直す" />
+      <img class="sp" src="images/sp/btn_rtn.png" alt="診断を最初からやり直す" />
+    </div>
+  </div>
+  
+  <div id="question5" class="question section invisible">
+    <h3>Q5/12</h3>
+    <h4 class="mincho"><p>髪がパサパサ<br class="sp">している</p></h4>
+    <ul class="cf">
+      <li><div class="btn" value="2,1">
+        <img class="pc" src="images/btn_yes.png" alt="当てはまる" />
+        <img class="sp" src="images/sp/btn_yes.png" alt="当てはまる" />
+      </div></li>
+      <li><div class="btn" value="1,1">
+        <img class="pc" src="images/btn_no.png" alt="当てはまらない" />
+        <img class="sp" src="images/sp/btn_no.png" alt="当てはまらない" />
+      </div></li>
+      <li class="last"><div class="btn" value="3,1">
+        <img class="pc" src="images/btn_any.png" alt="どちらともいえない" />
+        <img class="sp" src="images/sp/btn_any.png" alt="どちらともいえない" />
+      </div></li>
+    </ul>
+    <div class="btn btn-return" value="back">
+      <img class="pc" src="images/btn_rtn.png" alt="診断を最初からやり直す" />
+      <img class="sp" src="images/sp/btn_rtn.png" alt="診断を最初からやり直す" />
+    </div>
+  </div>
+  
+  <div id="question6" class="question section invisible">
+    <h3>Q6/12</h3>
+    <h4 class="mincho"><p class="f-small1">パーマやカラーリングで髪が傷んでいる</p></h4>
+    <ul class="cf">
+      <li><div class="btn" value="2,1">
+        <img class="pc" src="images/btn_yes.png" alt="当てはまる" />
+        <img class="sp" src="images/sp/btn_yes.png" alt="当てはまる" />
+      </div></li>
+      <li><div class="btn" value="1,0">
+        <img class="pc" src="images/btn_no.png" alt="当てはまらない" />
+        <img class="sp" src="images/sp/btn_no.png" alt="当てはまらない" />
+      </div></li>
+      <li class="last"><div class="btn" value="3,1">
+        <img class="pc" src="images/btn_any.png" alt="どちらともいえない" />
+        <img class="sp" src="images/sp/btn_any.png" alt="どちらともいえない" />
+      </div></li>
+    </ul>
+    <div class="btn btn-return" value="back">
+      <img class="pc" src="images/btn_rtn.png" alt="診断を最初からやり直す" />
+      <img class="sp" src="images/sp/btn_rtn.png" alt="診断を最初からやり直す" />
+    </div>
+  </div>
+  
+  <div id="question7" class="question section invisible">
+    <h3>Q7/12</h3>
+    <h4 class="mincho"><p>油ものを好んで<br class="sp">食べる</p></h4>
+    <ul class="cf">
+      <li><div class="btn" value="1,2">
+        <img class="pc" src="images/btn_yes.png" alt="当てはまる" />
+        <img class="sp" src="images/sp/btn_yes.png" alt="当てはまる" />
+      </div></li>
+      <li><div class="btn" value="2,2">
+        <img class="pc" src="images/btn_no.png" alt="当てはまらない" />
+        <img class="sp" src="images/sp/btn_no.png" alt="当てはまらない" />
+      </div></li>
+      <li class="last"><div class="btn" value="3,2">
+        <img class="pc" src="images/btn_any.png" alt="どちらともいえない" />
+        <img class="sp" src="images/sp/btn_any.png" alt="どちらともいえない" />
+      </div></li>
+    </ul>
+    <div class="btn btn-return" value="back">
+      <img class="pc" src="images/btn_rtn.png" alt="診断を最初からやり直す" />
+      <img class="sp" src="images/sp/btn_rtn.png" alt="診断を最初からやり直す" />
+    </div>
+  </div>
+  
+  <div id="question8" class="question section invisible">
+    <h3>Q8/12</h3>
+    <h4 class="mincho"><p>髪全体のボリュームが少なくなった</p></h4>
+    <ul class="cf">
+      <li><div class="btn" value="1,2">
+        <img class="pc" src="images/btn_yes.png" alt="当てはまる" />
+        <img class="sp" src="images/sp/btn_yes.png" alt="当てはまる" />
+      </div></li>
+      <li><div class="btn" value="2,3">
+        <img class="pc" src="images/btn_no.png" alt="当てはまらない" />
+        <img class="sp" src="images/sp/btn_no.png" alt="当てはまらない" />
+      </div></li>
+      <li class="last"><div class="btn" value="3,3">
+        <img class="pc" src="images/btn_any.png" alt="どちらともいえない" />
+        <img class="sp" src="images/sp/btn_any.png" alt="どちらともいえない" />
+      </div></li>
+    </ul>
+    <div class="btn btn-return" value="back">
+      <img class="pc" src="images/btn_rtn.png" alt="診断を最初からやり直す" />
+      <img class="sp" src="images/sp/btn_rtn.png" alt="診断を最初からやり直す" />
+    </div>
+  </div>
+  
+  <div id="question9" class="question section invisible">
+    <h3>Q9/12</h3>
+    <h4 class="mincho"><p>頭皮の脂っぽさが<br class="sp">気になる</p></h4>
+    <ul class="cf">
+      <li><div class="btn" value="1,5">
+        <img class="pc" src="images/btn_yes.png" alt="当てはまる" />
+        <img class="sp" src="images/sp/btn_yes.png" alt="当てはまる" />
+      </div></li>
+      <li><div class="btn" value="2,1">
+        <img class="pc" src="images/btn_no.png" alt="当てはまらない" />
+        <img class="sp" src="images/sp/btn_no.png" alt="当てはまらない" />
+      </div></li>
+      <li class="last"><div class="btn" value="3,3">
+        <img class="pc" src="images/btn_any.png" alt="どちらともいえない" />
+        <img class="sp" src="images/sp/btn_any.png" alt="どちらともいえない" />
+      </div></li>
+    </ul>
+    <div class="btn btn-return" value="back">
+      <img class="pc" src="images/btn_rtn.png" alt="診断を最初からやり直す" />
+      <img class="sp" src="images/sp/btn_rtn.png" alt="診断を最初からやり直す" />
+    </div>
+  </div>
+  
+  <div id="question10" class="question section invisible">
+    <h3>Q10/12</h3>
+    <h4 class="mincho"><p>頭の臭いが気になる</p></h4>
+    <ul class="cf">
+      <li><div class="btn" value="1,2">
+        <img class="pc" src="images/btn_yes.png" alt="当てはまる" />
+        <img class="sp" src="images/sp/btn_yes.png" alt="当てはまる" />
+      </div></li>
+      <li><div class="btn" value="2,0">
+        <img class="pc" src="images/btn_no.png" alt="当てはまらない" />
+        <img class="sp" src="images/sp/btn_no.png" alt="当てはまらない" />
+      </div></li>
+      <li class="last"><div class="btn" value="3,2">
+        <img class="pc" src="images/btn_any.png" alt="どちらともいえない" />
+        <img class="sp" src="images/sp/btn_any.png" alt="どちらともいえない" />
+      </div></li>
+    </ul>
+    <div class="btn btn-return" value="back">
+      <img class="pc" src="images/btn_rtn.png" alt="診断を最初からやり直す" />
+      <img class="sp" src="images/sp/btn_rtn.png" alt="診断を最初からやり直す" />
+    </div>
+  </div>
+  
+  <div id="question11" class="question section invisible">
+    <h3>Q11/12</h3>
+    <h4 class="mincho"><p>普段スタイリング剤を使用している</p></h4>
+    <ul class="cf">
+      <li><div class="btn" value="1,1">
+        <img class="pc" src="images/btn_yes.png" alt="当てはまる" />
+        <img class="sp" src="images/sp/btn_yes.png" alt="当てはまる" />
+      </div></li>
+      <li><div class="btn" value="2,0">
+        <img class="pc" src="images/btn_no.png" alt="当てはまらない" />
+        <img class="sp" src="images/sp/btn_no.png" alt="当てはまらない" />
+      </div></li>
+      <li class="last"><div class="btn" value="3,1">
+        <img class="pc" src="images/btn_any.png" alt="どちらともいえない" />
+        <img class="sp" src="images/sp/btn_any.png" alt="どちらともいえない" />
+      </div></li>
+    </ul>
+    <div class="btn btn-return" value="back">
+      <img class="pc" src="images/btn_rtn.png" alt="診断を最初からやり直す" />
+      <img class="sp" src="images/sp/btn_rtn.png" alt="診断を最初からやり直す" />
+    </div>
+  </div>
+  
+  <div id="question12" class="question section invisible">
+    <h3>Q12/12</h3>
+    <h4 class="mincho"><p class="f-small2">以前と比べて<br class="sp">髪にハリコシが<br class="sp">なくなってきた<p></h4>
+    <ul class="cf">
+      <li><div class="btn" value="3,2">
+        <img class="pc" src="images/btn_yes.png" alt="当てはまる" />
+        <img class="sp" src="images/sp/btn_yes.png" alt="当てはまる" />
+      </div></li>
+      <li><div class="btn" value="2,2">
+        <img class="pc" src="images/btn_no.png" alt="当てはまらない" />
+        <img class="sp" src="images/sp/btn_no.png" alt="当てはまらない" />
+      </div></li>
+      <li class="last"><div class="btn" value="1,0">
+        <img class="pc" src="images/btn_any.png" alt="どちらともいえない" />
+        <img class="sp" src="images/sp/btn_any.png" alt="どちらともいえない" />
+      </div></li>
+    </ul>
+    <div class="btn btn-return" value="back">
+      <img class="pc" src="images/btn_rtn.png" alt="診断を最初からやり直す" />
+      <img class="sp" src="images/sp/btn_rtn.png" alt="診断を最初からやり直す" />
+    </div>
+  </div>
+  
+  <div class="bg-btm sp"></div>
+</div>
+
+
+</div>
+
+ </body>
+</html>

@@ -17,7 +17,6 @@ window.onload = function() {
 		} else {
 			// 選択結果保存
 
-
 			var d = $(this).parent().parent().parent().attr("id");
             var g = parseInt(d.slice(8)) + 1;
             console.log("g=" + g);
