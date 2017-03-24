@@ -4,7 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta http-equiv="Content-Language" content="ja" />
-<title>TODO1</title>
+<!-- <title>頭皮の危険度診断</title> -->
+<title>TODO</title>
 <meta name="viewport" content="width=750,minimum-scale=0.1" />
 
 <link rel="stylesheet" type="text/css" href="css/reset.css">
@@ -29,16 +30,7 @@
 
 	<div id="question-section"></div>
 
-	<div id="result" class="section result">
-		<div class="pc">
-			<div class="check-result"><img src="images/result_01.png" /></div>
-			<div class="status"><img src="images/status_01.png" /></div>
-			<div class="advice"><img src="images/adv_01.png" /></div>
-			<div class="goods"><img src="images/goods_01.png" /></div>
-		</div>
-		<div class="sp">
-		</div>
-	</div>
+	<div id="result" class="section result"></div>
 </div>
 
 <script type="text/html" id="question-template">
@@ -61,18 +53,24 @@
 </script>
 
 <script type="text/html" id="result-template">
-	<div data-id="resultId" class="section result">
-		<div class="pc">
-			<div class="check-result"><img data-src="result" /></div>
-			<div class="status"><img data-src="status" /></div>
-			<div class="advice"><img data-src="advice" /></div>
-			<div class="goods" data-content="goods"></div>
+	<div class="pc">
+		<div class="check-result"><img data-src="result" /></div>
+		<div class="status"><img data-src="status" /></div>
+		<div class="advice"><img data-src="advice" /></div>
+		<div class="btn-restart btn" value="restart">
+			<img src="images/btn_restart.png" alt="最初からやり直す" />
 		</div>
-		<div class="sp">
+		<div class="btn btn-other" value="other">
+			<img src="images/btn_other.png" />
 		</div>
+		<div class="btn btn-buy" value="buy">
+			<img src="images/btn_buy.png" />
+		</div>
+		<div class="goods-list" data-content="goodsList" id="goods-list-pc"></div>
+	</div>
+	<div class="sp">
 	</div>
 </script>
-
 
 </body>
 </html>
