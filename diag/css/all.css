@@ -27,6 +27,13 @@
 	cursor: hand;
 	cursor: pointer;
 }
+.btn-answer:hover {
+	opacity: 0.8;
+    box-shadow: 5px 5px 5px 2px grey;
+    background-color: white;
+    top: -3px;
+    position: relative;
+}
 
 .section .pc {
 	margin:0 auto;
@@ -117,7 +124,10 @@
 }
 .result .pc .goods-list {
 	position: absolute;
-	top: 480px;
+	top: 477px;
+	text-align: center;
+	padding: 0 26px;
+	width: 745px;
 }
 .result .pc .goods {
     width: 175px;
@@ -127,4 +137,5 @@
     color: white;
     font-size: 18px;
     margin: 0 5px;
+    padding-top: 3px;
 }
