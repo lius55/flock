@@ -91,13 +91,13 @@
 }
 .result .pc .status {
 	position: absolute;
-	top: 150px;
+	top: 140px;
 	left: 88px;
 }
 .result .pc .advice {
 	position: absolute;
-	top: 305px;
-	left: 85px;
+	top: 295px;
+	left: 64px;
 }
 .result .pc .btn-buy {
 	top: 660px;
