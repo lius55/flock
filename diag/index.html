@@ -22,7 +22,9 @@
 			<div class="btn-start btn" value="start"><img src="images/btn_start.png" alt="診断はコチラから" /></div>
 		</div>
 		<div class="sp">
-			診断はこちら
+			<div class="btn-start btn" value="start">
+			<img src="images/sp/btn_start_off.png" onmouseover="this.src='images/sp/btn_start_on.png'" onmouseout="this.src='images/sp/btn_start_off.png'" alt="診断はコチラから" />
+			</div>
 		</div>
 	</div>
 
@@ -45,7 +47,15 @@
 			</div>
 		</div>
 		<div class="sp">
-			
+			<div class="question-num" data-content="questionNum"></div>
+			<div class="question-title"><img data-src="titleImage" /></div>
+			<div class="question-answer">
+				<img data-src="fstAnswer" class="btn btn-answer" value="A" />
+				<img data-src="sndAnswer" class="btn btn-answer" value="B" />
+			</div>
+			<div class="btn-restart btn" value="restart">
+				<img src="images/btn_restart.png" alt="最初からやり直す" />
+			</div>
 		</div>
 	</div>
 </script>

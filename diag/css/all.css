@@ -19,6 +19,17 @@
 	left: 20%;
 }
 
+/** スマホ版 **/
+@media screen and (max-width: 750px) {
+	#typecheck {
+	    width: 100%;
+	    height: auto;
+	    background: url(../images/bg.jpg) center top repeat;
+	    overflow: hidden;
+	}
+
+}
+
 /* 診断開始以外の内容非表示 */
 .question, .result {
 	display: none;
@@ -42,7 +53,13 @@
 	position: relative;
 	top: 100px;
 }
-
+.section .sp {
+	margin:0 auto;
+	width: 620px;
+	height: 1400px;
+	position: relative;
+	top: 100px;
+}
 #start .pc {
 	background:url(../images/bg_frame1.png) center top no-repeat;
 }
@@ -52,7 +69,15 @@
     top: 400px;
     right: 50px;
 }
-
+#start .sp {
+	background:url(../images/sp/bg_frame1.png) center top no-repeat;
+}
+#start .sp .btn-start {
+	position: absolute;
+	float: right;
+	top: 730px;
+    left: 140px;
+}
 .question .pc {
 	background:url(../images/bg_frame2.png) center top no-repeat;
 }
@@ -80,6 +105,10 @@
 .question .pc .question-answer img {
 	margin: 25px;
 }
+.question .sp {
+	background:url(../images/sp/bg_frame2.png) center top no-repeat;
+}
+
 .result .pc {
 	height: 782px;
 	background:url(../images/bg_frame3.png) center top no-repeat;
