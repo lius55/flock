@@ -4,26 +4,25 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta http-equiv="Content-Language" content="ja" />
-<!-- <title>頭皮の危険度診断</title> -->
-<title>TODO</title>
+<title>頭皮の危険度診断</title>
 <meta name="viewport" content="width=750,minimum-scale=0.1" />
 <link rel="stylesheet" type="text/css" href="css/all.css">
 <script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquery.loadTemplate.min.js"></script>
+<script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
 <script type="text/javascript" src="js/rule.js"></script>
-
 </head>
-
 <body>
 
 <div id="typecheck">
 	<div id="start" class="section">
 		<div class="pc">
-			<div class="btn-start btn" value="start"><img src="images/btn_start.png" alt="診断はコチラから" /></div>
+			<div class="btn-start btn" value="start">
+			<img src="images/btn_start.png" onmouseover="this.src='images/btn_start_on.png'" onmouseout="this.src='images/btn_start.png'" alt="診断はコチラから" />
+			</div>
 		</div>
 		<div class="sp">
 			<div class="btn-start btn" value="start">
-			<img src="images/sp/btn_start_off.png" onmouseover="this.src='images/sp/btn_start_on.png'" onmouseout="this.src='images/sp/btn_start_off.png'" alt="診断はコチラから" />
+			<img src="images/sp/btn_start.png" onmouseover="this.src='images/sp/btn_start_on.png'" onmouseout="this.src='images/sp/btn_start.png'" alt="診断はコチラから" />
 			</div>
 		</div>
 	</div>
@@ -34,49 +33,76 @@
 </div>
 
 <script type="text/html" id="question-template">
-	<div data-id="questionId" class="section question">
+	{{each list}}
+	<div id="question${$index+1}" class="section question">
 		<div class="pc">
-			<div class="question-num" data-content="questionNum"></div>
-			<div class="question-title"><img data-src="titleImage" /></div>
+			<div class="question-num">Q${$index+1}/Q${list.length}</div>
+			<div class="question-title"><img src="images/${titleImage}" /></div>
 			<div class="question-answer">
-				<img data-src="fstAnswer" class="btn btn-answer" value="A" />
-				<img data-src="sndAnswer" class="btn btn-answer" value="B" />
+				<img src="images/${fstAnswer}" class="btn btn-answer" value="A" />
+				<img src="images/${sndAnswer}" class="btn btn-answer" value="B" />
 			</div>
 			<div class="btn-restart btn" value="restart">
 				<img src="images/btn_restart.png" alt="最初からやり直す" />
 			</div>
 		</div>
 		<div class="sp">
-			<div class="question-num" data-content="questionNum"></div>
-			<div class="question-title"><img data-src="titleImage" /></div>
+			<div class="question-num">Q${$index+1}/Q${list.length}</div>
+			<div class="question-title"><img src="images/sp/${titleImage}"/></div>
 			<div class="question-answer">
-				<img data-src="fstAnswer" class="btn btn-answer" value="A" />
-				<img data-src="sndAnswer" class="btn btn-answer" value="B" />
+				<img src="images/sp/${fstAnswer}" class="btn btn-answer" value="A" />
+				<img src="images/sp/${sndAnswer}" class="btn btn-answer" value="B" />
 			</div>
 			<div class="btn-restart btn" value="restart">
 				<img src="images/btn_restart.png" alt="最初からやり直す" />
 			</div>
 		</div>
 	</div>
+	{{/each}}
 </script>
 
 <script type="text/html" id="result-template">
 	<div class="pc">
-		<div class="check-result"><img data-src="result" /></div>
-		<div class="status"><img data-src="status" /></div>
-		<div class="advice"><img data-src="advice" /></div>
+		<div class="check-result"><img src="images/${result.result}" /></div>
+		<div class="status"><img src="images/${result.status}" /></div>
+		<div class="advice"><img src="images/${result.advice}" /></div>
 		<div class="btn-restart btn" value="restart">
 			<img src="images/btn_restart.png" alt="最初からやり直す" />
 		</div>
-		<div class="btn btn-other" value="other">
-			<img src="images/btn_other.png" />
+		<div class="btn btn-other">
+			<a href="http://item.rakuten.co.jp/cerapure/c/0000000174/" target="_blank"><img src="images/btn_other.png"/></a>
 		</div>
 		<div class="btn btn-buy" value="buy">
-			<img src="images/btn_buy.png" />
+			<a href="${result.allUrl}" target="_blank">
+				<img src="images/btn_buy.png" onmouseover="this.src='images/btn_buy_on.png'" onmouseout="this.src='images/btn_buy.png'"/>
+			</a>
 		</div>
-		<div class="goods-list" data-content="goodsList" id="goods-list-pc"></div>
+		<div class="goods-list" id="goods-list-pc">
+			{{each goods}}
+			<a class="goods" style="background: url(images/${fileName}) center top no-repeat;" href="${url}" target="_blank">step${$index+1}</a>
+			{{/each}}
+		</div>
 	</div>
 	<div class="sp">
+		<div class="check-result"><img src="images/sp/${result.result}" /></div>
+		<div class="status"><img src="images/sp/${result.status}" /></div>
+		<div class="advice"><img src="images/sp/${result.advice}" /></div>
+		<div class="btn-restart btn" value="restart">
+			<img src="images/sp/btn_restart.png" alt="最初からやり直す" />
+		</div>
+		<div class="btn btn-other" value="other">
+			<a href="http://item.rakuten.co.jp/cerapure/c/0000000174/" target="_blank"><img src="images/sp/btn_other.png"/></a>
+		</div>
+		<div class="btn btn-buy" value="buy">
+			<a href="${result.allUrl}" target="_blank">
+				<img src="images/sp/btn_buy.png" onmouseover="this.src='images/sp/btn_buy_on.png'" onmouseout="this.src='images/sp/btn_buy.png'"/>
+			</a>
+		</div>
+		<div class="goods-list" id="goods-list-pc">
+			{{each goods}}
+			<a class="goods" style="background: url(images/${fileName}) center top no-repeat; background-size: cover;" href="${url}" target="_blank">step${$index+1}</a>
+			{{/each}}
+		</div>
 	</div>
 </script>
 
