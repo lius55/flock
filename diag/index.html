@@ -14,15 +14,11 @@
 <body>
 
 <div id="typecheck">
-	<div id="start" class="section">
-		<div class="pc">
+	<div id="start" class="section start">
+		<div>
 			<div class="btn-start btn" value="start">
-			<img src="images/btn_start.png" onmouseover="this.src='images/btn_start_on.png'" onmouseout="this.src='images/btn_start.png'" alt="診断はコチラから" />
-			</div>
-		</div>
-		<div class="sp">
-			<div class="btn-start btn" value="start">
-			<img src="images/sp/btn_start.png" onmouseover="this.src='images/sp/btn_start_on.png'" onmouseout="this.src='images/sp/btn_start.png'" alt="診断はコチラから" />
+			<img class="pc" src="images/btn_start.png" onmouseover="this.src='images/btn_start_on.png'" onmouseout="this.src='images/btn_start.png'" alt="診断はコチラから" />
+			<img class="sp" src="images/sp/btn_start.png" onmouseover="this.src='images/sp/btn_start_on.png'" onmouseout="this.src='images/sp/btn_start.png'" alt="診断はコチラから" />
 			</div>
 		</div>
 	</div>
@@ -37,13 +33,15 @@
 	<div id="question${$index+1}" class="section question">
 		<div class="pc">
 			<div class="question-num">Q${$index+1}/Q${list.length}</div>
-			<div class="question-title"><img src="images/${titleImage}" /></div>
+			<div class="question-title">
+				<img src="images/${titleImage}"/>
+			</div>
 			<div class="question-answer">
-				<img src="images/${fstAnswer}" class="btn btn-answer" value="A" />
-				<img src="images/${sndAnswer}" class="btn btn-answer" value="B" />
+				<img src="images/${fstAnswer}" class="btn btn-answer" value="A"/>
+				<img src="images/${sndAnswer}" class="btn btn-answer" value="B"/>
 			</div>
 			<div class="btn-restart btn" value="restart">
-				<img src="images/btn_restart.png" alt="最初からやり直す" />
+				<img src="images/btn_restart.png" alt="最初からやり直す"/>
 			</div>
 		</div>
 		<div class="sp">
