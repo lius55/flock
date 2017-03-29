@@ -1,5 +1,7 @@
 @charset "utf-8";
-
+body{
+	margin: 0px;
+}
 /* レスポンジブ対応 */
 .pc { display:block; }
 .sp { display:none; }
@@ -11,7 +13,7 @@
 #typecheck {
   	min-width:750px;
   	width:auto;
-  	max-width:1400px;
+  	/*max-width:1400px;*/
   	height:935px;
 	background:url(../images/sp/bg.png) center top repeat;
 	overflow:hidden;
