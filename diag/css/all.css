@@ -30,11 +30,21 @@ body{
 	cursor: pointer;
 }
 .btn-answer:hover {
+	opacity: 1;
+    box-shadow: 0px 0px 0px 0px;
+    background-color: white;
+    top: 0px;
+    position: relative;
+}
+.btn-answer {
 	opacity: 0.8;
     box-shadow: 5px 5px 5px 2px grey;
     background-color: white;
     top: -3px;
     position: relative;
+}
+.btn-restart:hover,.btn-other:hover {
+	opacity: 0.8;
 }
 
 /** PC版 **/
@@ -147,6 +157,7 @@ body{
 /** 共通 **/
 .goods {
 	text-decoration: none;
+	font-family: Verdana;
 }
 
 /** スマホ版 **/

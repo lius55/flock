@@ -41,10 +41,10 @@ window.onload = function() {
 		sbb: [ goodsList.goods04, goodsList.goods07, goodsList.goods08 ],
 		c:   [ goodsList.goods06, goodsList.goods07 ],
 		cc:  [ goodsList.goods04, goodsList.goods07 ],
-		wa:  [ goodsList.goods01, goodsList.goods02, goodsList.goods03, goodsList.goods05 ],
-		wb:  [ goodsList.goods02, goodsList.goods03, goodsList.goods05 ],
-		swb: [ goodsList.goods01, goodsList.goods02, goodsList.goods03 ],
-		wc:  [ goodsList.goods02, goodsList.goods03 ]
+		wa:  [ goodsList.goods05, goodsList.goods03, goodsList.goods02, goodsList.goods01 ],
+		wb:  [ goodsList.goods05, goodsList.goods03, goodsList.goods02 ],
+		swb: [ goodsList.goods03, goodsList.goods02, goodsList.goods01 ],
+		wc:  [ goodsList.goods03, goodsList.goods02 ]
 	};
 
 	// 診断結果パータン(result: 結果、status: あなたの状態、advice: アドバイス、allUrl: まとめて購入リンク先)
@@ -81,8 +81,8 @@ window.onload = function() {
 		"AAA-A-A-BA": { num: '02', result: resultPattern.a,   goods: goodsPattern.a   },
 		"AAA-A-B--A": { num: '03', result: resultPattern.b,   goods: goodsPattern.b   },
 		"AAB-A-A-AA": { num: '04', result: resultPattern.aa,  goods: goodsPattern.aa  },
-		"AAB-A-A-BA": { num: '05', result: resultPattern.sb,  goods: goodsPattern.aa  },
-		"AAB-A-B--A": { num: '06', result: resultPattern.aa,  goods: goodsPattern.sb  },
+		"AAB-A-A-BA": { num: '05', result: resultPattern.aa,  goods: goodsPattern.aa  },
+		"AAB-A-B--A": { num: '06', result: resultPattern.bb,  goods: goodsPattern.bb  },
 		"AAB-B-A-AA": { num: '07', result: resultPattern.aa,  goods: goodsPattern.aa  },
 		"AAB-B-A-BA": { num: '08', result: resultPattern.aa,  goods: goodsPattern.aa  },
 		"AAB-B-B--A": { num: '09', result: resultPattern.bb,  goods: goodsPattern.bb  },
@@ -176,9 +176,10 @@ window.onload = function() {
 		for(key in rules){
 			if(answerList.match(key.replaceAll("-", "\\D"))) {
 				result = rules[key];
+				break;
 			}
 		}
-		console.log("result=" + result);
+		console.log("resultNum=" + result.num);
 
 		$("#result").empty();
 		$("#result-template").tmpl(result).appendTo("#result");
