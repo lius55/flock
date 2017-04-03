@@ -239,8 +239,8 @@ body{
 	    text-align: center;
 	    color: white;
 	    font-size: 28px;
-	    margin: 8px 3px;
-	    padding-top: 3px;
+        margin: 0px 3px;
+	    padding-top: 10px;
 	}
 	.result .btn-restart {
 	    top: 2120px;
