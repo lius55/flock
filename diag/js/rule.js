@@ -34,9 +34,9 @@ window.onload = function() {
 	// 商品表示パターン(表示順番)
 	var goodsPattern = {
 		a:   [ goodsList.goods05, goodsList.goods06, goodsList.goods07, goodsList.goods08 ],
-		aa:  [ goodsList.goods04, goodsList.goods05, goodsList.goods07, goodsList.goods08 ],
+		aa:  [ goodsList.goods05, goodsList.goods04, goodsList.goods07, goodsList.goods08 ],
 		b:   [ goodsList.goods05, goodsList.goods06, goodsList.goods07 ],
-		bb:  [ goodsList.goods04, goodsList.goods05, goodsList.goods07 ],
+		bb:  [ goodsList.goods05, goodsList.goods04, goodsList.goods07 ],
 		sb:  [ goodsList.goods06, goodsList.goods07, goodsList.goods08 ],
 		sbb: [ goodsList.goods04, goodsList.goods07, goodsList.goods08 ],
 		c:   [ goodsList.goods06, goodsList.goods07 ],
