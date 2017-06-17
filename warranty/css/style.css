@@ -1,0 +1,52 @@
+.btn-upload {
+	width: 100%;
+    padding: 6px 12px;
+    border-radius: 5px !important;
+}
+
+.imagePreview {
+    width: 100%;
+    height: 180px;
+    background-position: center center;
+    background-size: cover;
+    -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, .3);
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    padding-top: 10%;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #a39999;
+}
+
+.error {
+	color: red;
+	margin-top: 5px;
+}
+
+.input-error {
+	border: 2px solid red !important;
+}
+
+.container-extend {
+	padding-top: 20px;
+}
+
+.logo {
+    text-align: center;
+    padding-bottom: 20px;
+}
+.logo img {
+    width: 95%;
+}
+.overview {
+    border-top: 2px solid #e66a6a;
+    padding: 20px 0;
+}
+#submit {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.agree {
+    text-align: center;
+}

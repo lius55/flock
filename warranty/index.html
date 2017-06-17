@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>保証登録</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript" src="js/warranty.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/load-image.all.min.js"></script>
+</head>
+<body>
+
+<div class="container container-extend">
+  <div class="logo">
+      <img src="img/logo.jpg"/>
+  </div>
+
+  <div class="overview">
+    正規品登録のため、フォームに必要事項を入力下さい。<br/>
+    登録された個人情報は、サポート、代替品の送付、弊社商品のご紹介に限定して使用されます。第3者への提供および開示はいたしません。
+  </div>
+
+	<form id="submitForm">
+		<div class="form-group">
+		    <label for="fullName">氏名:</label>
+		    <input type="text" class="form-control" name="fullName" required-msg="氏名を入力してください。" placeholder="必須：氏名" validate="required">
+		</div>
+
+		<div class="form-group">
+		    <label for="email">メールアドレス:</label>
+		    <input type="email" class="form-control" name="email" placeholder="必須：登録完了、サポートに必要です" validate="required,email" required-msg="メールアドレスを入力してください。" email-msg="メールアドレスを正しく入力してください。">
+        <input type="hidden" value="yes" name="isSendEmail">
+		</div>
+
+		<div class="form-group">
+		    <label for="phone">電話番号:</label>
+		    <input type="phone" class="form-control" name="phone" placeholder="必須：メールが届かない場合に使用します" validate="required,phone" required-msg="電話番号を入力してください。" id="phone">
+		</div>
+
+		<div class="form-group">
+			<div class="imagePreview">
+      アップロードする画像について、ご確認ください。
+      <br/><br/>
+      1.購入日とカラーの情報が含まれていること。<br/>
+      2.納品書、レシート、オンラインショップのスクリンショットなど、正式なものであること。
+      </div>
+			<div class="input-group">
+			    <label class="input-group-btn">
+			        <span class="btn btn-primary btn-upload">
+			            <span id="upload-text">写真撮影またはファイルを選択</span><input type="file" style="display:none" accept='image/*' class="uploadFile" validate="required" id="uploadImage" required-msg="写真撮影またはファイルを選択してください。" error-display="file-error" name="image">
+			        </span>
+			    </label>
+			</div>
+			<div class="error" id="file-error"></div>
+		</div>
+
+    <div>
+    同意内容、後日登録
+    <div class="agree"><label class=""><input type="checkbox" value="" id="agree">同意する</label></div>
+    </div>
+
+    <button type="button" class="btn btn-success" id="submit" disabled>アップロードする</button>
+    <button type="button" data-toggle="modal" data-target="#myModal" id="openModal" style="display: none;">MODAL</button>
+	</form>
+</div>
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+        <p>正規品の登録が完了しました。</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" id="close">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+
+$("#uploadImage").on('change',function (e) {
+    loadImage(
+        e.target.files[0],
+        function (img) {
+            $(".imagePreview").empty();
+            var width = $(".imagePreview").css("width").match(/[0-9]+/).join('');
+            $(".imagePreview").append(img);
+            var height = (img.height * width) / img.width;
+            $(".imagePreview").css("width", width + "px");
+            $(".imagePreview").css("height", height + "px");
+            $('.imagePreview').find("canvas").css("width", width + "px");
+            $(".imagePreview").find("canvas").css("height", height + "px");
+            $(".imagePreview").css("padding", "0");
+            $('#upload-text').text('タップで修正できます');
+        },
+        {
+          orientation: true
+        }
+    );
+});
+
+$("#agree").on('change', function() {
+  if ($("#agree").prop("checked")) {
+    $("#submit").attr("disabled", false);
+  } else {
+    $("#submit").attr("disabled", true);
+  }
+});
+
+</script>
+
+</body>
+</html>
